@@ -1,0 +1,21 @@
+SHELL Commands
+cd	    Change Directory. Moves you to your "Home" folder by default.
+cd /	Moves you to the Root directory (the very top of your hard drive).
+cd ..	Moves you up one folder level.
+cd ~	Moves you to your Home directory (e.g., /Users/yourname).
+pwd	    Print Working Directory: Shows exactly where you are right now.
+
+ls	    List files and folders in your current location.
+ls -la	List all files (including hidden ones starting with .) in a long list format with details like file size.
+mkdir	Make Directory. Creates a new folder (e.g., mkdir my_project).
+touch	Creates a new empty file (e.g., touch index.js).
+rm -rf	Remove Recursively and Forcefully. Deletes a folder and everything inside it forever. Use with extreme caution!
+
+nano	A simple, beginner-friendly text editor that runs inside the terminal.
+vim	    A very powerful but complex text editor. (Tip: To exit, type :q! and hit Enter).
+cat	    Concatenate. Quickly displays the entire contents of a file on your screen without opening an editor.
+
+PACKAGE MANAGER:
+Node - npm
+Python - pip, pipenv
+MacOs - brew
