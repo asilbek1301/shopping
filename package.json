@@ -7,7 +7,8 @@
     "start": "node server.js",
     "advice": "nodemon advice.js",
     "compute": "nodemon compute.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "suggest": "nodemon suggest.js",
+    "cap": "nodemon cap.js"
   },
   "author": "ALAN",
   "license": "MIT",
