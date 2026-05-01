@@ -2,44 +2,34 @@
 
     DEFINE:             CALL:
     callback            function
-    async / await       then / catch
-    peromise            then / catch
+    async / await       then / catch & async/await
+    peromise            then / catch & async/await
 
     
 
 */
 
 // define
-function division(a, b) {
-    return new Promise((resolve, reject) => {
+async function division(a, b) {
         if(b === 0) {
-            reject("Not divided by zero");
+            throw new Error("Not divided by zero");
         } else {
-            setTimeout(function() {
-                resolve(a % b);
-            }, 5000);
+            return a % b;
         }
-    })
 }
 
 // call
-division(10, 3).then(data => {
-    console.log("Result:", data);
-    console.log("....");
+// division() ni call qismida then / catch ni o'rniga <<< async/await >>> ishlatilsa promise & callback hell ni oldini oladi
+async function run() {
 
-    division(10, 4).then(data => {
-        console.log("Result:", data);
-        console.log("....");
+    let result = await division(10, 3);
+    console.log("result one:", result);
 
-        division(20, 7).then(data => {
-            console.log("Result:", data);
-            console.log("....");
-        }).catch(err => {
-            console.log("Error division:", err);
-        });
-    }).catch(err => {
-        console.log("Error division:", err);
-    });
-}).catch(err => {
-    console.log("Error division:", err);
-});
+    result = await division(10, 4);
+    console.log("result two:", result);
+
+    result = await division(20, 7);
+    console.log("result three:", result);
+}
+
+run();
