@@ -17,7 +17,7 @@ function division(a, b) {
         } else {
             setTimeout(function() {
                 resolve(a % b);
-            }, 5000)
+            }, 5000);
         }
     })
 }
@@ -26,6 +26,20 @@ function division(a, b) {
 division(10, 3).then(data => {
     console.log("Result:", data);
     console.log("....");
+
+    division(10, 4).then(data => {
+        console.log("Result:", data);
+        console.log("....");
+
+        division(20, 7).then(data => {
+            console.log("Result:", data);
+            console.log("....");
+        }).catch(err => {
+            console.log("Error division:", err);
+        });
+    }).catch(err => {
+        console.log("Error division:", err);
+    });
 }).catch(err => {
     console.log("Error division:", err);
 });

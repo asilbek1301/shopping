@@ -8,6 +8,7 @@
 
 ● async/await function:
     - async/await o'zining sintaksi qulayligi uchun ko'p ishlatiladi. async/await functionda setTimeout(), setInterval() umuman ishlamaydi.
+    - async/await eng katta qulayligi promise & callback hell larni oldini olishidir
 
 ● promise function:
     - promise function ko'pincha async/await qilolmaydigan holatlarda ishlatiladi. promise faqat bir marta javob beradi. setTimeout(), setInterval() da bir martta javob qaytarib o'zini yakunlaydi
